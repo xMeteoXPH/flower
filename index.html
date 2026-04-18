@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌷 Tulip Garden</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky">
+    <div class="sun"></div>
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+  </div>
+
+  <!-- viewBox tall enough; slice fills screen edge-to-edge -->
+  <svg id="garden-svg"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 800 600"
+       preserveAspectRatio="xMidYMax slice">
+    <defs>
+      <!-- clip so tulips don't show below the soil line -->
+      <clipPath id="above-ground">
+        <rect x="-200" y="0" width="1200" height="430"/>
+      </clipPath>
+    </defs>
+  </svg>
+
+  <div class="controls">
+    <button id="waterBtn" class="water-btn">🚿 Water the Garden</button>
+    <p class="hint" id="hint">Click to make the tulips grow!</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
